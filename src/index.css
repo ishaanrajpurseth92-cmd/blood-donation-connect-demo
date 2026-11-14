@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-navy: #102A43;
+  --color-dark-navy: #0B1F33;
+  --color-crimson-red: #D7263D;
+  --color-dark-crimson: #A4132A;
+  --color-teal: #2A9D8F;
+  --color-purple: #7667C7;
+  --color-text-main: #172B3A;
+  --color-background-main: #F4F7FB;
+}
+
+:root {
+  --primary-navy: #102A43;
+  --dark-navy: #0B1F33;
+  --background: #F4F7FB;
+  --crimson-red: #D7263D;
+  --dark-crimson: #A4132A;
+  --teal: #2A9D8F;
+  --purple: #7667C7;
+  --text-main: #172B3A;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--background);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Explicit Bulletproof Utility Overrides */
+.bg-crimson-red { background-color: #D7263D !important; }
+.hover\:bg-dark-crimson:hover { background-color: #A4132A !important; }
+.bg-dark-crimson { background-color: #A4132A !important; }
+.bg-primary-navy { background-color: #102A43 !important; }
+.bg-dark-navy { background-color: #0B1F33 !important; }
+.bg-teal { background-color: #2A9D8F !important; }
+.hover\:bg-teal-700:hover { background-color: #1F7A6F !important; }
+
+.text-primary-navy { color: #102A43 !important; }
+.text-crimson-red { color: #D7263D !important; }
+.text-dark-crimson { color: #A4132A !important; }
+.text-teal { color: #2A9D8F !important; }
+
+.border-crimson-red { border-color: #D7263D !important; }
+.border-primary-navy { border-color: #102A43 !important; }
+.border-teal { border-color: #2A9D8F !important; }
+
+/* Primary Action Buttons */
+.btn-primary {
+  background-color: #D7263D !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px 0 rgba(215, 38, 61, 0.35) !important;
+}
+.btn-primary:hover {
+  background-color: #A4132A !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(215, 38, 61, 0.45) !important;
+}
+
+.btn-secondary {
+  background: #ffffff !important;
+  color: #102A43 !important;
+  border: 1.5px solid #CBD5E1 !important;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+}
+.btn-secondary:hover {
+  background: #F8FAFC !important;
+  border-color: #D7263D !important;
+  color: #D7263D !important;
+  transform: translateY(-1px);
+}
+
+.btn-teal {
+  background-color: #2A9D8F !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px 0 rgba(42, 157, 143, 0.35) !important;
+}
+.btn-teal:hover {
+  background-color: #1F7A6F !important;
+  transform: translateY(-1px);
+}
+
+/* Hero Section Headline Gradient */
+.hero-gradient-text {
+  background: linear-gradient(135deg, #D7263D 0%, #E63946 55%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 900;
+}
+
+/* Stats Section Dark Container */
+.stats-section-dark {
+  background: linear-gradient(135deg, #0B1F33 0%, #102A43 100%) !important;
+  color: #ffffff !important;
+  border-top: 1px solid #1E3A5F;
+  border-bottom: 1px solid #1E3A5F;
+}
+.stats-section-dark .stat-number {
+  color: #ffffff !important;
+  font-weight: 900;
+}
+.stats-section-dark .stat-label {
+  color: #94A3B8 !important;
+  font-weight: 600;
+}
+
+/* Call-to-action Banner Dark Container */
+.cta-banner-dark {
+  background: linear-gradient(135deg, #0B1F33 0%, #102A43 65%, #18334E 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 20px 45px -15px rgba(11, 31, 51, 0.5) !important;
+}
+.cta-banner-dark h2 {
+  color: #ffffff !important;
+}
+.cta-banner-dark p {
+  color: #E2E8F0 !important;
+}
+
+/* Healthcare Notice Box */
+.notice-box-dark {
+  background: #0E2439 !important;
+  color: #E2E8F0 !important;
+  border: 1px solid #1E3A5F !important;
+}
+.notice-box-dark strong {
+  color: #ffffff !important;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 10px 30px -10px rgba(16, 42, 67, 0.08), 0 4px 6px -2px rgba(16, 42, 67, 0.04);
+}
+
+.glass-panel-dark {
+  background: rgba(16, 42, 67, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px -15px rgba(11, 31, 51, 0.4);
+}
+
+.glass-input {
+  background: #ffffff;
+  border: 1.5px solid #CBD5E1;
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: #D7263D;
+  box-shadow: 0 0 0 3px rgba(215, 38, 61, 0.15);
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.demo-mode-banner {
+  min-height: 38px;
+  padding: 6px max(calc((100vw - 1280px) / 2), 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  flex-wrap: wrap;
+  background: #0b1f33;
+  color: #f8fafc;
+  font-size: 11px;
+}
+.demo-mode-banner > svg { color: #fbbf24; }
+.demo-mode-banner strong { color: #ffd0d5; letter-spacing: .08em; }
+.demo-mode-banner > span { color: #d4dee8; }
+.demo-mode-banner details { position: relative; }
+.demo-mode-banner summary { cursor: pointer; color: #fff; text-decoration: underline; }
+.demo-mode-banner details > span { display: block; padding: 5px 10px; white-space: nowrap; }
+.demo-mode-banner details[open] { position: relative; z-index: 50; }
+.demo-mode-banner details[open] > span:first-of-type { margin-top: 6px; }
+.demo-mode-banner details[open] { background: #102a43; border: 1px solid #35506a; border-radius: 8px; padding: 6px 9px; }
+.demo-mode-banner button { margin-left: 8px; border: 1px solid #ffffff55; border-radius: 6px; color: white; background: #ffffff12; padding: 4px 8px; font-size: 10px; }
+.demo-mode-banner button:hover { background: #ffffff25; }
+.custom-hospital-popup .leaflet-popup-content { margin: 10px 12px; }
+.custom-leaflet-marker, .custom-picker-marker { background: transparent; border: 0; }
+@media (max-width: 640px) {
+  .demo-mode-banner { justify-content: flex-start; padding: 7px 12px; gap: 6px; font-size: 10px; }
+  .demo-mode-banner > span { flex: 1; }
+}
